@@ -1,0 +1,13 @@
+version: '3.2'
+
+services:
+  app:
+    image: andyianriley/swapi-graphql
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PORT=9080  
+    ports:
+      - "9080:9080"
